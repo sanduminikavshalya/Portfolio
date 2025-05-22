@@ -1,0 +1,3528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANDUMINI KAVSHALYA - AI Enthusiats & ML Enthusiats</title>
+    <meta name="description" content=" AI Enthusiats specializing in Machine Learning, Computer Vision, and NLP. Explore my portfolio of innovative AI solutions.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .ai-download-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #4a90e2, #50e3c2);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 16px 40px 16px 60px;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(80, 227, 194, 0.6);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  .ai-download-button:hover,
+  .ai-download-button:focus {
+    box-shadow: 0 0 30px rgba(80, 227, 194, 1);
+    transform: translateY(-3px);
+    outline: none;
+  }
+
+  .ai-download-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0 10px rgba(80, 227, 194, 0.8);
+  }
+
+  /* Container for Lottie animation */
+  .ai-icon-container {
+    position: absolute;
+    left: 15px;
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Text inside button */
+  .ai-download-text {
+    margin-left: 10px;
+  }
+        .ai-connection-message {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    color: #00d8ff;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00d8ff88;
+    width: fit-content;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-connection-message::before {
+    content: "🤖";
+    font-size: 5rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .ai-connection-message span.highlight {
+    color: #00fff7;
+    font-weight: 700;
+    animation: pulseGlow 2.5s infinite ease-in-out;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { text-shadow: 0 0 8px #00fff7; }
+    50% { text-shadow: 0 0 20px #00fff7; }
+  }
+  .whatsapp-icon {
+    width: 32px;   /* Adjust size as needed */
+    height: 32px;
+    display: inline-block;
+  }
+        /* AI Hologram Effect */
+        .ai-hologram {
+            position: absolute;
+            right: 5%;
+            bottom: 10%;
+            width: 300px;
+            height: 300px;
+            z-index: 0;
+        }
+        
+        .hologram-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0,212,255,0.2) 0%, transparent 70%);
+            animation: hologramPulse 6s infinite ease-in-out;
+        }
+        
+        .hologram-content {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(233, 69, 69, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .hologram-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .hologram-particles::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 50%, rgba(0,212,255,0.1) 100%);
+            animation: rotateHologram 20s linear infinite;
+        }
+        
+        @keyframes hologramPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+        
+        @keyframes rotateHologram {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* AI Sentiment Analysis */
+        .ai-sentiment-analysis {
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .sentiment-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .sentiment-meter {
+            flex-grow: 1;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .sentiment-level {
+            height: 100%;
+            width: 0;
+            background: var(--ai-gradient);
+            transition: width 0.5s ease, background 0.5s ease;
+        }
+        
+        /* AI Processing Dots */
+        .ai-processing {
+            display: inline-flex;
+            gap: 0.3rem;
+            margin-left: 0.5rem;
+        }
+        
+        .ai-dot {
+            width: 6px;
+            height: 6px;
+            background: rgb(243, 187, 187);
+            border-radius: 50%;
+            opacity: 0;
+            animation: processingDot 1.5s infinite ease-in-out;
+            animation-delay: var(--delay);
+        }
+        
+        @keyframes processingDot {
+            0%, 100% { opacity: 0.3; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-5px); }
+        }
+        
+        /* Research Section Styles */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .research-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.08);
+        }
+        
+        .research-visual {
+            height: 200px;
+            background: rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .research-content {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+        
+        .research-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .research-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .research-abstract {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .research-link {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .research-link:hover {
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+        
+        /* DNA Animation */
+        .dna-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .dna-strand {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .dna-base {
+            width: 30px;
+            height: 30px;
+            background: rgba(0, 212, 255, 0.3);
+            border-radius: 50%;
+            border: 2px solid rgba(0, 212, 255, 0.6);
+            position: relative;
+        }
+        
+        .dna-connection {
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 212, 255, 0.5), transparent);
+            animation: dnaFloat 2s infinite ease-in-out;
+        }
+        
+        @keyframes dnaFloat {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+        
+        /* AI Signature */
+        .ai-signature {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        #signatureCanvas {
+            width: 200px;
+            height: 80px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .signature-label {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Floating AI Brain */
+        .floating-brain {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: 10%;
+            bottom: 20%;
+            z-index: 0;
+        }
+        
+        .brain-hemisphere {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: brainPulse 4s infinite ease-in-out;
+        }
+        
+        .brain-lobe {
+            position: absolute;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 50%;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+        
+        .brain-lobe:nth-child(1) {
+            width: 60%;
+            height: 60%;
+            top: 10%;
+            left: 10%;
+            animation: lobeFloat 5s infinite ease-in-out;
+        }
+        
+        .brain-lobe:nth-child(2) {
+            width: 40%;
+            height: 40%;
+            bottom: 15%;
+            right: 15%;
+            animation: lobeFloat 6s infinite ease-in-out reverse;
+        }
+        
+        .neural-activity {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            animation: neuralActivity 8s infinite linear;
+        }
+        
+        @keyframes brainPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes lobeFloat {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(5px, 5px); }
+            50% { transform: translate(0, 10px); }
+            75% { transform: translate(-5px, 5px); }
+        }
+        
+        @keyframes neuralActivity {
+            0% { transform: rotate(0deg); opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { transform: rotate(360deg); opacity: 0.5; }
+        }
+        
+        /* AI Chat Interface */
+        .ai-chat-interface {
+            position: fixed;
+            bottom: 120px;
+            right: 30px;
+            width: 350px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 102, 255, 0.2);
+            z-index: 1001;
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .ai-chat-interface.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .chat-header {
+            padding: 1.5rem;
+            background: var(--ai-gradient);
+            color: white;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-header h4 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .chat-messages {
+            height: 300px;
+            padding: 1.5rem;
+            overflow-y: auto;
+            background: var(--surface-alt);
+        }
+        
+        .ai-message {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .message-content {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            max-width: 80%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .message-content::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 15px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid white;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        .chat-input input {
+            flex-grow: 1;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        .chat-input button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            margin-left: 0.5rem;
+            cursor: pointer;
+        }
+        
+        /* Quantum Animation */
+        .quantum-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .quantum-particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--primary-color);
+            animation: quantumMove 15s infinite linear;
+        }
+        
+        .quantum-wave {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 50%;
+            animation: quantumExpand 8s infinite ease-out;
+        }
+        
+        @keyframes quantumMove {
+            0% { transform: translate(0, 0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(100vw, 100vh); opacity: 0; }
+        }
+        
+        @keyframes quantumExpand {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+
+        .quantum-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #00f8ff, #004466);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2.5s infinite ease-in-out;
+  box-shadow: 0 0 15px 8px rgba(0, 255, 255, 0.6);
+  z-index: 10;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px 8px rgba(0, 255, 255, 0.6);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px 15px rgba(0, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.quantum-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle at center,
+    rgba(0, 255, 255, 0.15) 0px,
+    rgba(0, 255, 255, 0.15) 6px,
+    transparent 7px,
+    transparent 12px);
+  transform: translate(-50%, -50%);
+  animation: waveMove 6s linear infinite;
+  z-index: 5;
+}
+
+@keyframes waveMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 72px 72px;
+  }
+}
+
+        #feedbackForm {
+    max-width: 400px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  #feedbackForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  #feedbackForm input[type="text"],
+  #feedbackForm input[type="email"],
+  #feedbackForm select,
+  #feedbackForm textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  #feedbackForm textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  #feedbackForm button {
+    background-color: #6c18b1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  #feedbackForm button:hover {
+    background-color: #530f8a;
+  }
+  #feedbackMessage {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066FF;
+            --secondary-color: #00D4FF;
+            --accent-color: #FF6B00;
+            --neural-purple: #8B5CF6;
+            --ai-green: #00F5A0;
+            --text-primary: #0A0B0D;
+            --text-secondary: #6B7280;
+            --background: #FAFBFC;
+            --surface: #FFFFFF;
+            --surface-alt: #F3F4F6;
+            --border: #E5E7EB;
+            --neural-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            --ai-gradient: linear-gradient(135deg, #0066FF 0%, #00D4FF 50%, #8B5CF6 100%);
+            --glow-color: rgba(0, 102, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background);
+            overflow-x: hidden;
+        }
+
+        /* AI Particle Background */
+        .ai-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Neural Network Background */
+        .neural-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .neural-node {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        .neural-connection {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            animation: dataFlow 4s infinite linear;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+
+        @keyframes dataFlow {
+            0% { opacity: 0; transform: scaleX(0); }
+            50% { opacity: 1; transform: scaleX(1); }
+            100% { opacity: 0; transform: scaleX(0); }
+        }
+
+        /* Navigation with AI Glow */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 102, 255, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 32px rgba(0, 102, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--ai-gradient);
+            transform: scaleX(0);
+            animation: logoGlow 2s infinite ease-in-out;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { transform: scaleX(0); }
+            50% { transform: scaleX(1); }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--glow-color);
+        }
+
+        /* Hero Section with Advanced AI Effects */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--neural-gradient);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 0, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.3) 0%, transparent 50%);
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ai-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease 0.4s both;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            animation: fadeInUp 1s ease 1s both;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* AI Typing Effect */
+        .typing-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.2em;
+            background: currentColor;
+            margin-left: 2px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Enhanced Sections */
+        .section {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section with AI Metrics */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        .about-image {
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid transparent;
+            background: var(--ai-gradient);
+            padding: 4px;
+            animation: profileGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes profileGlow {
+            0%, 100% { 
+                box-shadow: 0 0 30px var(--glow-color);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 50px var(--glow-color);
+                transform: scale(1.02);
+            }
+        }
+
+        .ai-orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            border: 2px solid rgba(0, 102, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .ai-orbit::before {
+            content: '🤖';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            animation: counterRotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes counterRotate {
+            from { transform: translateX(-50%) rotate(0deg); }
+            to { transform: translateX(-50%) rotate(-360deg); }
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .ai-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--ai-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .metric-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 102, 255, 0.1);
+        }
+
+        .metric-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Skills Section with AI Visualization */
+        .skills-section {
+            background: var(--surface-alt);
+            position: relative;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .skill-category {
+            background: var(--surface);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--ai-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .skill-category:hover::before {
+            opacity: 0.05;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0, 102, 255, 0.15);
+        }
+
+        .skill-category > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-category h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--ai-gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .skill-tag:hover::before {
+            left: 100%;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+        }
+
+        /* Enhanced Project Cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s ease;
+            position: relative;
+            border: 1px solid var(--border);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--ai-gradient);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+        }
+
+        .project-card:hover::before {
+            opacity: 0.03;
+        }
+
+        .project-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0, 102, 255, 0.15);
+        }
+
+        .project-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+            background: var(--neural-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .project-content {
+            padding: 2.5rem;
+        }
+
+        .project-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            background: var(--surface-alt);
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 102, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .project-link:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        /* Experience Timeline with AI Elements */
+        .experience-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--ai-gradient);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 3rem 0 3rem 120px;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 35px;
+            top: 3rem;
+            width: 30px;
+            height: 30px;
+            background: var(--ai-gradient);
+            border-radius: 50%;
+            border: 4px solid var(--surface);
+            box-shadow: 0 0 20px var(--glow-color);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid var(--surface);
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+            box-shadow: 0 20px 50px rgba(0, 102, 255, 0.1);
+        }
+
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .timeline-company {
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Contact Section with AI Animation */
+        .contact {
+            background: var(--surface-alt);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(0, 102, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--ai-gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--surface);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 140px;
+        }
+
+        /* Footer with AI Elements */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--neural-gradient);
+            opacity: 0.1;
+            animation: gradientFlow 10s ease-in-out infinite;
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { transform: translateX(0%) rotate(0deg); }
+            50% { transform: translateX(10%) rotate(180deg); }
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--ai-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .social-link:hover::before {
+            opacity: 1;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .social-link i {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* AI Chat Bubble */
+        .ai-chat-bubble {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: var(--ai-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+            z-index: 1000;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .ai-chat-bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+
+        /* Floating AI Icons */
+        .floating-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            color: var(--primary-color);
+            animation: floatIcon 15s infinite linear;
+        }
+
+        @keyframes floatIcon {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.1;
+            }
+            90% {
+                opacity: 0.1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.5s ease;
+        }
+
+        .ai-loader {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(0, 102, 255, 0.1);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1000px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .profile-image {
+                width: 280px;
+                height: 280px;
+            }
+
+            .ai-orbit {
+                width: 320px;
+                height: 320px;
+            }
+
+            .ai-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .timeline-item {
+                padding-left: 80px;
+            }
+
+            .experience-timeline::before {
+                left: 30px;
+            }
+
+            .timeline-marker {
+                left: 15px;
+            }
+
+            .section {
+                padding: 5rem 0;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .ai-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+
+            .ai-orbit {
+                width: 260px;
+                height: 260px;
+            }
+        }
+
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--surface-alt);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--ai-gradient);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+        .qr-section {
+            margin-top: 40px;
+        }
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #333;
+            padding: 10px;
+            background-color: white;
+            margin: 0 auto;
+        }
+        a.download-link {
+            display: block;
+            margin-top: 15px;
+            font-size: 18px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.download-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="ai-loader"></div>
+        <div class="loading-text">Initializing AI Portfolio...</div>
+    </div>
+
+    <!-- AI Particles Background -->
+    <div class="ai-particles" id="aiParticles"></div>
+
+    <!-- Floating AI Icons -->
+    <div class="floating-icons" id="floatingIcons"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Sandumini Kavshalya</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="neural-bg" id="neuralBg"></div>
+        <div class="hero-content">
+            <div class="ai-badge">🤖 AI Enthusiats & Data Scientist Enthusiats</div>
+            <h1>Transforming Ideas into <br><span class="typing-container">Intelligent Solutions<span class="cursor">|</span></span></h1>
+            <p class="hero-subtitle">Building Tomorrow's Technology Today</p>
+            <p class="hero-description">
+                I specialize in creating cutting-edge AI systems that solve real-world problems using machine learning, 
+                computer vision, and natural language processing. Let's shape the future with artificial intelligence.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Explore My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-comments"></i> Let's Collaborate
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+                Passionate about leveraging artificial intelligence to create meaningful impact and solve complex challenges
+            </p>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-container">
+                        <img src="mypic.jpg" alt="sandumini_profile picture" class="profile-image">
+                        <div class="ai-orbit"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Building Tomorrow's Technology Today</h3>
+                    <p>
+                        With over 1 years of experience in artificial intelligence and machine learning, I've had the privilege 
+                        of working on diverse projects ranging from life-saving computer vision systems in healthcare to 
+                        revolutionary NLP models that transform customer experiences.
+                    </p>
+                    <p>
+                        My journey began with Undergraduate Bachelor of Information and Communication Technology (Hons.) Student at University of Sri Jayewardenepura, where I specialized in 
+                        for my degree programme in Network Technology. Since then, I've been dedicated to pushing the boundaries of 
+                        what's possible with AI, always keeping real-world applications and ethical considerations at the forefront.
+                    </p>
+                    <p>
+                        When I'm not developing AI solutions, you'll find me contributing to open-source projects, mentoring 
+                        aspiring data scientists, or exploring the latest breakthroughs in artificial general intelligence.
+                    </p>
+                </div>
+            </div>
+            <div class="ai-metrics">
+                <div class="metric-card">
+                    <div class="metric-number" data-target="10">10</div>
+                    <div class="metric-label">AI Projects Completed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number" data-target="5">5</div>
+                    <div class="metric-label">Research Papers Published</div>
+                </div>
+                 <div class="metric-card">
+                    <div class="metric-number" data-target="5">5</div>
+                    <div class="metric-label">AI compitition </div>
+                </div>
+                 <div class="metric-card">
+                    <div class="metric-number" data-target="5">5</div>
+                    <div class="metric-label">AI Project Team Work</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number" data-target="10000">10000+</div>
+                    <div class="metric-label">Models in Production</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number" data-target="95">95%</div>
+                    <div class="metric-label">Avg. Model Accuracy %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <p class="section-subtitle">
+                Comprehensive skill set across the entire AI development lifecycle and cutting-edge technologies
+            </p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        Machine Learning
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">AutoML</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <div class="skill-icon"><i class="fas fa-eye"></i></div>
+                        Computer Vision
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">YOLO</span>
+                        <span class="skill-tag">ResNet</span>
+                        <span class="skill-tag">CNN</span>
+                        <span class="skill-tag">Image Segmentation</span>
+                        <span class="skill-tag">Object Detection</span>
+                        <span class="skill-tag">Face Recognition</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <div class="skill-icon"><i class="fas fa-language"></i></div>
+                        Natural Language Processing
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">BERT</span>
+                        <span class="skill-tag">GPT</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">spaCy</span>
+                        <span class="skill-tag">NLTK</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">LangChain</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        Data Engineering
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Apache Spark</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">ETL/ELT</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                        Cloud & MLOps
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Google Cloud</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">SageMaker</span>
+                        <span class="skill-tag">Kubeflow</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Model Monitoring</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>
+                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                        Generative AI
+                    </h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">GPT-4</span>
+                        <span class="skill-tag">DALL-E</span>
+                        <span class="skill-tag">Stable Diffusion</span>
+                        <span class="skill-tag">LLM Fine-tuning</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">AI Agents</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured AI Projects</h2>
+            <p class="section-subtitle">
+                Real-world AI solutions that create meaningful impact and solve complex challenges
+            </p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Medical AI Diagnosis Platform(work-on)</h3>
+                        <p class="project-description">
+                            Revolutionary deep learning system for automated detection of lung cancer in CT scans, achieving 
+                            96% accuracy and reducing diagnosis time by 70%. Predticed by Successfully deployed in 5 major hospitals, 
+                            potentially saving thousands of lives through early detection.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">ResNet-50</span>
+                            <span class="tech-tag">DICOM</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Intelligent Customer AI Assistant(work-on)</h3>
+                        <p class="project-description">
+                            Advanced conversational AI system using transformer architecture that handles 85% of customer 
+                            inquiries automatically, improving response time by 95% and customer satisfaction by 40%. 
+                            Supports 12 languages with context-aware responses.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">WebSocket</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Interactive Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Powered Predictive Analytics(work-on)</h3>
+                        <p class="project-description">
+                            Real-time forecasting system for e-commerce sales using ensemble methods and deep learning. 
+                            Improved inventory planning accuracy by 52% and reduced waste by $3.2M annually. Processes 
+                            1M+ transactions daily with sub-second predictions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">Prophet</span>
+                            <span class="tech-tag">Plotly</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">GCP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Autonomous Vehicle Vision AI(Future Plan)</h3>
+                        <p class="project-description">
+                            Computer vision pipeline for real-time object detection and tracking in autonomous vehicles. 
+                            Processes 60 FPS with 99.4% accuracy for pedestrian and vehicle detection. Integrated with 
+                            Tesla's Autopilot development team.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">YOLO v8</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorRT</span>
+                            <span class="tech-tag">CUDA</span>
+                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">C++</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Research Paper
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Fraud Detection Engine(Future Plan)</h3>
+                        <p class="project-description">
+                            Machine learning system for real-time fraud detection in financial transactions. Reduced false 
+                            positives by 78% while maintaining 99.9% fraud detection rate, saving $75M+ annually. 
+                            Processes 50,000 transactions per second.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Random Forest</span>
+                            <span class="tech-tag">Anomaly Detection</span>
+                            <span class="tech-tag">Apache Kafka</span>
+                            <span class="tech-tag">Elasticsearch</span>
+                            <span class="tech-tag">Kibana</span>
+                            <span class="tech-tag">MLflow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Generative AI Content Platform(work on)</h3>
+                        <p class="project-description">
+                            Multi-modal AI system that generates high-quality marketing content including text, images, and videos. 
+                            Increased content production efficiency by 400% while maintaining brand consistency. Used by 
+                            500+ marketing teams globally.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GPT-4</span>
+                            <span class="tech-tag">DALL-E 3</span>
+                            <span class="tech-tag">Stable Diffusion</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Try Platform
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section" style="background: var(--surface-alt);">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <p class="section-subtitle">
+                Career progression through leading AI and technology companies, driving innovation and impact
+            </p>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">ADD TIME </div>
+                        <h3 class="timeline-title">ADD JOB ROLE </h3>
+                        <div class="timeline-company">ADD COMPANY NAME </div>
+                        <p class="timeline-description">
+                            ADD description
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">ADD TIME </div>
+                        <h3 class="timeline-title">ADD JOB ROLE </h3>
+                        <div class="timeline-company">ADD COMPANY NAME</div>
+                        <p class="timeline-description">
+                           ADD DISCRIPTION 
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">ADD TIME </div>
+                        <h3 class="timeline-title">ADD JOB ROLE</h3>
+                        <div class="timeline-company">ADD COMPANY</div>
+                        <p class="timeline-description">
+                            ADD DISCRIPTION
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">ADD TIME </div>
+                        <h3 class="timeline-title"> ADD JOB ROLE </h3>
+                        <div class="timeline-company">ADD COMPANY</div>
+                        <p class="timeline-description">
+                            ADD DISCRIPTION 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+        <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Let's Build the Future Together</h2>
+            <p class="section-subtitle">
+                Whether you have a project in mind or just want to discuss AI innovations, I'd love to hear from you.....!
+            </p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Connect With Me</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sanduminikavshalya@icloud.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+94 74 344 00 57(WHATSAPP)</p>
+                            <p>+94 72 344 00 57</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Pitipana North,Homagama,Colombo(current Address)</p>
+                            <p>Malwala,Rathnapura(Home Address)</p>
+                        </div>
+                    </div>
+                    <!-- Social Media Icons -->
+<div class="social-icons">
+  <a href="https://wa.me/94743440057" target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon" />
+  </a>
+</div>
+<!-- Include Font Awesome CDN in your <head> if not already included -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <!-- AI Neural Network Visualization -->
+                    <div class="ai-connection-visual">
+                        <canvas id="neuralCanvas"></canvas>
+                        <div class="connection-text">
+                    
+                            <p class="ai-connection-message">
+  Establishing <span class="highlight">AI-powered connection</span>...!<br />
+  <em>Join me to explore the future together!</em>
+</p>
+      
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="aiContactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="ai-input-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="ai-input-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <div class="ai-input-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                            <div class="ai-sentiment-analysis">
+                                <span class="sentiment-label">AI analyzing tone...</span>
+                                <div class="sentiment-meter">
+                                    <div class="sentiment-level"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="aiSubmitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                            <span class="ai-processing">
+                                <span class="ai-dot" style="--delay: 0s"></span>
+                                <span class="ai-dot" style="--delay: 0.2s"></span>
+                                <span class="ai-dot" style="--delay: 0.4s"></span>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AI Holographic Projection Effect -->
+        <div class="ai-hologram">
+            <div class="hologram-circle"></div>
+            <div class="hologram-content">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="hologram-particles"></div>
+        </div>
+    </section>
+
+    <!-- AI Research Section (New) -->
+    <section id="research" class="section" style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); color: rgb(120, 190, 210);">
+        <div class="container">
+            <h2 class="section-title" style="background: linear-gradient(90deg, #00d4ff 0%, #8b5cf6 100%); -webkit-background-clip: text; background-clip: text;">AI Research & Publications</h2>
+            <p class="section-subtitle" style="color: rgba(224, 137, 137, 0.8);">
+                Contributing to the advancement of artificial intelligence through cutting-edge research
+            </p>
+            
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-visual">
+                        <canvas id="paper1Visual"></canvas>
+                    </div>
+                    <div class="research-content">
+                        <h3>Adaptive Neural Architecture Search for Efficient NLP</h3>
+                        <div class="research-meta">
+                            <span class="research-conference">NeurIPS 2025</span>
+                            <span class="research-citation">Citations: 0</span>
+                        </div>
+                        <p class="research-abstract">
+                            Proposed a novel evolutionary approach to neural architecture search that reduces computation time by 78% while maintaining state-of-the-art performance on GLUE benchmark.
+                        </p>
+                        <a href="#" class="research-link">
+                            <i class="fas fa-file-pdf"></i> Read Paper
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-visual">
+                        <canvas id="paper2Visual"></canvas>
+                    </div>
+                    <div class="research-content">
+                        <h3>Multi-Modal Fusion for Robust Autonomous Navigation</h3>
+                        <div class="research-meta">
+                            <span class="research-conference">ICML 2025</span>
+                            <span class="research-citation">Citations: 0</span>
+                        </div>
+                        <p class="research-abstract">
+                            Developed a transformer-based fusion architecture that combines LiDAR, camera, and radar data with 40% better obstacle detection in adverse weather conditions compared to previous approaches.
+                        </p>
+                        <a href="#" class="research-link">
+                            <i class="fas fa-file-pdf"></i> Read Paper
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-visual">
+                        <canvas id="paper3Visual"></canvas>
+                    </div>
+                    <div class="research-content">
+                        <h3>Few-Shot Learning with Meta-Transfer Networks</h3>
+                        <div class="research-meta">
+                            <span class="research-conference">CVPR 2025</span>
+                            <span class="research-citation">Citations: 0</span>
+                        </div>
+                        <p class="research-abstract">
+                            Introduced a new paradigm for few-shot learning that achieves human-level performance on novel tasks with just 3-5 examples by leveraging cross-domain knowledge transfer.
+                        </p>
+                        <a href="#" class="research-link">
+                            <i class="fas fa-file-pdf"></i> Read Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- DNA Strand Animation -->
+        <div class="dna-animation">
+            <div class="dna-strand">
+                <div class="dna-base"></div>
+                <div class="dna-connection"></div>
+                <div class="dna-base"></div>
+                <div class="dna-connection"></div>
+                <!-- More bases will be added via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-google-scholar"></i>
+                </a>
+            </div>
+            <p>Explore my projects and download my CV using the QR code below...</p>
+    </header>
+
+   <section class="qr-section" style="text-align:center; margin-top:40px; font-family: Arial, sans-serif;">
+  <h2>Download My Curriculm Vitae</h2>
+
+  <!-- Dynamic QR Code -->
+  <div>
+    <img id="qrCode" alt="PDF" style="width:200px; height:200px; border:2px solid #333; padding:10px; background:#a4dbef; margin: 0 auto;" />
+  </div>
+
+  <!-- Download link (hidden initially) -->
+  <a id="downloadLink" href="https://yourdomain.com/path-to-your-cv.pdf" 
+     class="download-link" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     style="display:none; margin-top: 15px; font-size: 18px; color: #007BFF; text-decoration: none; font-weight: bold;">
+    Click here to download my CV
+  </a>
+
+  
+  <!-- Scan QR Button -->
+   <!-- Button HTML -->
+<button id="aiDownloadBtn" class="ai-download-button" aria-label="Download my CV">
+  <div id="lottieIcon" class="ai-icon-container"></div>
+  <span class="ai-download-text">Download My CV</span>
+</button>
+
+  <!-- Video element for camera preview (hidden initially) -->
+  <video id="video" width="300" height="200" style="margin-top: 20px; display:none; border: 2px solid #333;"></video>
+
+  <!-- Message area -->
+  <p id="scanResult" style="margin-top: 15px; font-size: 16px; color: green;"></p>
+</section>
+<section class="qr-section" style="text-align:center; margin-top:40px; font-family: Arial, sans-serif; max-width: 400px; margin-left:auto; margin-right:auto;">
+  <h2>Scan My CV</h2>
+
+  <!-- Container for AI-styled dynamic QR code -->
+  <canvas id="qrCanvas" style="margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); cursor: pointer;"></canvas>
+
+  <!-- Download button, hidden initially -->
+  <button id="downloadBtn" 
+          style="display:none; margin-top: 20px; background: linear-gradient(135deg, #4a90e2, #50e3c2); border:none; color:white; padding: 14px 40px; font-size: 18px; border-radius: 30px; cursor: pointer; box-shadow: 0 6px 12px rgba(46, 139, 87, 0.5); transition: all 0.3s ease;">
+    Download My CV
+  </button>
+
+  <!-- Additional message -->
+  <p style="margin-top: 20px; font-size: 16px; color: #555;">
+    You can also scan this QR code using your secondary mobile devices.
+  </p>
+
+  <!-- Scan QR Code Button -->
+  <button id="scanQrBtn" 
+          style="margin-top: 15px; padding: 10px 25px; font-size: 16px; cursor: pointer; border-radius: 20px; border: 2px solid #4a90e2; background: white; color: #4a90e2; transition: background-color 0.3s ease;">
+    Scan QR Code to Download
+  </button>
+
+  <!-- Video preview for scanning -->
+  <video id="videoPreview" width="300" height="200" style="margin-top: 20px; display:none; border-radius: 15px; border: 2px solid #4a90e2;"></video>
+
+  <!-- Scan result message -->
+  <p id="scanMessage" style="margin-top: 15px; font-size: 16px; color: green;"></p>
+</section>
+
+            <p class="footer-text">
+                © 2025 SANDUMINI KAVSHALYA - AI Enthusiats. All rights reserved.
+            </p>
+            <p class="footer-subtext">
+                Built with cutting-edge AI technologies and a passion for innovation.
+            </p>
+            
+            <!-- AI Signature -->
+            <div class="ai-signature">
+                <canvas id="signatureCanvas"></canvas>
+                <div class="signature-label">AI-Generated Signature</div>
+            </div>
+        </div>
+        
+        <!-- Floating AI Brain -->
+        <div class="floating-brain">
+            <div class="brain-lobe"></div>
+            <div class="brain-lobe"></div>
+            <div class="brain-hemisphere"></div>
+            <div class="neural-activity"></div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant -->
+    <div class="ai-chat-bubble" id="chatBubble">
+        <i class="fas fa-robot"></i>
+    </div>
+    
+    <!-- AI Chat Interface (Hidden by default) -->
+    <div class="ai-chat-interface" id="chatInterface">
+        <div class="chat-header">
+            <h4>AI Assistant</h4>
+            <button class="close-chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="ai-message">
+                <div class="message-content">
+                    Hello! I'm your AI assistant. How can I help you explore Sandumini's portfolio?
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Ask me anything about AI projects..." id="chatInput">
+            <button id="sendMessage">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Quantum Computing Animation -->
+    <div class="quantum-animation">
+        <div class="quantum-particle"></div>
+        <div class="quantum-animation">
+  <div class="quantum-wave"></div>
+  <div class="quantum-particle"></div>
+  <!-- SVG container for animatedQubits -->
+  <svg id="quantumSvg" style="position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);" ></svg>
+</div>
+
+<div id="controls">
+  <button id="applyHadamard">Apply Hadamard (H)</button>
+  <button id="applyT">Apply T Gate</button>
+  <button id="measureQubit">Measure Qubit</button>
+</div>
+
+        <div class="quantum-wave"></div>
+    </div>
+
+    
+
+    <!-- JavaScript for Advanced AI Effects -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate loading screen
+            setTimeout(function() {
+            document.getElementById('loadingOverlay').style.opacity = '0';
+            setTimeout(function() {
+                document.getElementById('loadingOverlay').style.display = 'none';
+            }, 500);
+            }, 2000);
+            
+            // Create AI particles
+            const particlesContainer = document.getElementById('aiParticles');
+            for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+            particle.style.width = (Math.random() * 3 + 1) + 'px';
+            particle.style.height = particle.style.width;
+            particlesContainer.appendChild(particle);
+            }
+            
+            // Create floating AI icons
+            const iconsContainer = document.getElementById('floatingIcons');
+            const icons = ['🤖', '🧠', '👁️', '📊', '🔍', '⚙️', '💡', '📈', '🔮', '🌐'];
+            for (let i = 0; i < 15; i++) {
+            const icon = document.createElement('div');
+            icon.classList.add('floating-icon');
+            icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+            icon.style.left = Math.random() * 100 + 'vw';
+            icon.style.animationDuration = (Math.random() * 15 + 10) + 's';
+            icon.style.animationDelay = Math.random() * 10 + 's';
+            icon.style.fontSize = (Math.random() * 1 + 1.5) + 'rem';
+            iconsContainer.appendChild(icon);
+            }
+            
+            // Create neural network background
+            const neuralBg = document.getElementById('neuralBg');
+            const nodeCount = 20;
+            const connectionCount = 30;
+            
+            // Create nodes
+            for (let i = 0; i < nodeCount; i++) {
+            const node = document.createElement('div');
+            node.classList.add('neural-node');
+            node.style.left = Math.random() * 100 + 'vw';
+            node.style.top = Math.random() * 100 + 'vh';
+            node.style.animationDelay = Math.random() * 3 + 's';
+            neuralBg.appendChild(node);
+            }
+            
+            // Create connections
+            for (let i = 0; i < connectionCount; i++) {
+            const connection = document.createElement('div');
+            connection.classList.add('neural-connection');
+            connection.style.left = Math.random() * 100 + 'vw';
+            connection.style.top = Math.random() * 100 + 'vh';
+            connection.style.width = Math.random() * 200 + 100 + 'px';
+            connection.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+            connection.style.animationDelay = Math.random() * 4 + 's';
+            neuralBg.appendChild(connection);
+            }
+            
+            // Animate metric numbers
+            const metricNumbers = document.querySelectorAll('.metric-number');
+            metricNumbers.forEach(metric => {
+            const target = parseInt(metric.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const updateNumber = () => {
+                current += step;
+                if (current < target) {
+                if (target > 1000) {
+                    metric.textContent = Math.floor(current).toLocaleString();
+                } else {
+                    metric.textContent = Math.floor(current);
+                }
+                requestAnimationFrame(updateNumber);
+                } else {
+                if (target > 1000) {
+                    metric.textContent = target.toLocaleString();
+                } else {
+                    metric.textContent = target;
+                }
+                }
+            };
+            
+            setTimeout(updateNumber, Math.random() * 1000);
+            });
+            
+            // Typing effect
+            const typingTexts = [
+            "Intelligent Solutions",
+            "Machine Learning Models",
+            "Neural Networks",
+            "AI Applications",
+            "Deep Learning Systems"
+            ];
+            let currentTextIndex = 0;
+            const typingContainer = document.querySelector('.typing-container');
+            const cursor = document.querySelector('.cursor');
+            
+            function typeWriter(text, i, callback) {
+            if (i < text.length) {
+                typingContainer.textContent = text.substring(0, i + 1);
+                setTimeout(function() {
+                typeWriter(text, i + 1, callback)
+                }, 100);
+            } else if (typeof callback == 'function') {
+                setTimeout(callback, 1000);
+            }
+            }
+            
+            function startTyping() {
+            typeWriter(typingTexts[currentTextIndex], 0, function() {
+                setTimeout(eraseText, 1500);
+            });
+            }
+            
+            function eraseText() {
+            let text = typingTexts[currentTextIndex];
+            if (typingContainer.textContent.length > 0) {
+                typingContainer.textContent = text.substring(0, typingContainer.textContent.length - 1);
+                setTimeout(eraseText, 50);
+            } else {
+                currentTextIndex = (currentTextIndex + 1) % typingTexts.length;
+                setTimeout(startTyping, 500);
+            }
+            }
+            
+            startTyping();
+            
+            // Chat bubble interaction
+            const chatBubble = document.getElementById('chatBubble');
+            const chatInterface = document.getElementById('chatInterface');
+            
+            chatBubble.addEventListener('click', function() {
+            chatInterface.classList.toggle('active');
+            });
+            
+            document.querySelector('.close-chat').addEventListener('click', function() {
+            chatInterface.classList.remove('active');
+            });
+            
+            // Sentiment analysis for contact form
+            const messageInput = document.getElementById('message');
+            const sentimentLevel = document.querySelector('.sentiment-level');
+            const sentimentLabel = document.querySelector('.sentiment-label');
+            
+            messageInput.addEventListener('input', function() {
+            const text = this.value;
+            const sentiment = analyzeSentiment(text);
+            updateSentimentDisplay(sentiment);
+            });
+            
+            function analyzeSentiment(text) {
+            if (!text) return 0;
+            
+            // Simple sentiment analysis (in a real app, use a proper NLP library)
+            const positiveWords = ['excited', 'happy', 'great', 'wonderful', 'amazing', 'pleasure', 'thank'];
+            const negativeWords = ['angry', 'unhappy', 'bad', 'terrible', 'awful', 'problem', 'disappointed'];
+            
+            let score = 0;
+            const words = text.toLowerCase().split(/\s+/);
+            
+            words.forEach(word => {
+                if (positiveWords.includes(word)) score += 1;
+                if (negativeWords.includes(word)) score -= 1;
+            });
+            
+            // Normalize to -1 to 1 range
+            return Math.max(-1, Math.min(1, score / 5));
+            }
+            
+            function updateSentimentDisplay(sentiment) {
+            const percentage = (sentiment + 1) * 50;
+            sentimentLevel.style.width = percentage + '%';
+            
+            if (sentiment > 0.5) {
+                sentimentLevel.style.background = 'linear-gradient(90deg, #00d4ff 0%, #00f5a0 100%)';
+                sentimentLabel.textContent = 'Very positive tone detected';
+            } else if (sentiment > 0.1) {
+                sentimentLevel.style.background = 'linear-gradient(90deg, #00d4ff 0%, #8b5cf6 100%)';
+                sentimentLabel.textContent = 'Positive tone detected';
+            } else if (sentiment < -0.5) {
+                sentimentLevel.style.background = 'linear-gradient(90deg, #ff6b00 0%, #f093fb 100%)';
+                sentimentLabel.textContent = 'Negative tone detected';
+            } else if (sentiment < -0.1) {
+                sentimentLevel.style.background = 'linear-gradient(90deg, #8b5cf6 0%, #f093fb 100%)';
+                sentimentLabel.textContent = 'Slightly negative tone';
+            } else {
+                sentimentLevel.style.background = 'linear-gradient(90deg, #8b5cf6 0%, #00d4ff 100%)';
+                sentimentLabel.textContent = 'Neutral tone detected';
+            }
+            }
+            
+            // DNA animation
+            const dnaStrand = document.querySelector('.dna-strand');
+            for (let i = 0; i < 10; i++) {
+            const base = document.createElement('div');
+            base.classList.add('dna-base');
+            dnaStrand.appendChild(base);
+            
+            if (i < 9) {
+                const connection = document.createElement('div');
+                connection.classList.add('dna-connection');
+                connection.style.animationDelay = (i * 0.2) + 's';
+                dnaStrand.appendChild(connection);
+            }
+            }
+            
+            // Quantum animation
+            const quantumAnimation = document.querySelector('.quantum-animation');
+            for (let i = 0; i < 5; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('quantum-particle');
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = Math.random() * 100 + 'vh';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+            quantumAnimation.appendChild(particle);
+            
+            const wave = document.createElement('div');
+            wave.classList.add('quantum-wave');
+            wave.style.left = Math.random() * 100 + 'vw';
+            wave.style.top = Math.random() * 100 + 'vh';
+            wave.style.animationDelay = Math.random() * 8 + 's';
+            quantumAnimation.appendChild(wave);
+            }
+            
+            // AI signature drawing
+            const canvas = document.getElementById('signatureCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 200;
+            canvas.height = 80;
+            
+            ctx.strokeStyle = 'rgba(0, 212, 255, 0.8)';
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            
+            // Simulate signature drawing
+            setTimeout(() => {
+            ctx.beginPath();
+            ctx.moveTo(20, 40);
+            
+            // Animate signature
+            const points = [
+                [30, 45], [40, 35], [50, 50], [60, 30], 
+                [70, 55], [80, 25], [90, 60], [100, 20],
+                [110, 65], [120, 15], [130, 70], [140, 10],
+                [150, 75], [160, 40], [170, 60], [180, 50]
+            ];
+            
+            let i = 0;
+            const drawNext = () => {
+                if (i < points.length) {
+                ctx.lineTo(points[i][0], points[i][1]);
+                ctx.stroke();
+                i++;
+                setTimeout(drawNext, 100);
+                } else {
+                // Add some random noise to make it look more organic
+                for (let j = 0; j < 5; j++) {
+                    ctx.moveTo(
+                    180 + Math.random() * 15, 
+                    50 + (Math.random() - 0.5) * 10
+                    );
+                    ctx.lineTo(
+                    180 + Math.random() * 15, 
+                    50 + (Math.random() - 0.5) * 10
+                    );
+                    ctx.stroke();
+                }
+                }
+            };
+            
+            drawNext();
+            }, 100);
+
+            // Responsive mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            mobileMenuBtn.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            });
+
+            // Prevent form submission default and show AI processing dots
+            const aiContactForm = document.getElementById('aiContactForm');
+            const aiSubmitBtn = document.getElementById('aiSubmitBtn');
+            aiContactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            aiSubmitBtn.disabled = true;
+            aiSubmitBtn.classList.add('processing');
+            setTimeout(() => {
+                aiSubmitBtn.disabled = false;
+                aiSubmitBtn.classList.remove('processing');
+                aiContactForm.reset();
+                sentimentLevel.style.width = '0';
+                sentimentLabel.textContent = 'AI analyzing tone...';
+                alert('Thank you for reaching out! Your message has been sent.');
+            }, 2000);
+            });
+
+            // Simple AI chat (demo only)
+            const chatInput = document.getElementById('chatInput');
+            const sendMessageBtn = document.getElementById('sendMessage');
+            const chatMessages = document.getElementById('chatMessages');
+            sendMessageBtn.addEventListener('click', sendChatMessage);
+            chatInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') sendChatMessage();
+            });
+            function sendChatMessage() {
+            const msg = chatInput.value.trim();
+            if (!msg) return;
+            const userMsg = document.createElement('div');
+            userMsg.className = 'ai-message';
+            userMsg.innerHTML = `<div class="message-content" style="background:#e5e7eb;">${msg}</div>`;
+            chatMessages.appendChild(userMsg);
+            chatInput.value = '';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            setTimeout(() => {
+                const aiMsg = document.createElement('div');
+                aiMsg.className = 'ai-message';
+                aiMsg.innerHTML = `<div class="message-content">I'm an AI assistant. For more info about Alex's work, please explore the sections above!</div>`;
+                chatMessages.appendChild(aiMsg);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+            }
+        });
+        dragElement(document.getElementById("aiItem"));
+
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.onmousedown = dragMouseDown;
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+        }
+    </script>
+
+    <!-- Feedback Form Section -->
+    <section id="feedback" class="section" style="background: var(--surface-alt);">
+        <div class="container">
+            <h2 class="section-title">Share Your Feedback</h2>
+            <p class="section-subtitle">
+                Your feedback helps improve this AI portfolio. Please let me know your thoughts!
+            </p>
+            <form id="feedbackForm">
+                <label for="fb-name">Your Name *</label>
+                <input type="text" id="fb-name" name="name" placeholder="Enter your name" required />
+
+                <label for="fb-email">Your Email *</label>
+                <input type="email" id="fb-email" name="email" placeholder="Enter your email" required />
+
+                <label for="fb-rating">Rating *</label>
+                <select id="fb-rating" name="rating" required>
+                    <option value="" disabled selected>Select rating</option>
+                    <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                    <option value="4">⭐⭐⭐⭐ Good</option>
+                    <option value="3">⭐⭐⭐ Average</option>
+                    <option value="2">⭐⭐ Poor</option>
+                    <option value="1">⭐ Very Poor</option>
+                </select>
+
+                <label for="fb-comments">Comments *</label>
+                <textarea id="fb-comments" name="comments" placeholder="Write your feedback here..." required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+                <div id="feedbackMessage"></div>
+            </form>
+        </div>
+    </section>
+    <script>
+        const fbForm = document.getElementById('feedbackForm');
+        const feedbackMessage = document.getElementById('feedbackMessage');
+
+        fbForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = fbForm.name.value.trim();
+            const email = fbForm.email.value.trim();
+            const rating = fbForm.rating.value;
+            const comments = fbForm.comments.value.trim();
+
+            if (!name || !email || !rating || !comments) {
+                feedbackMessage.style.color = 'red';
+                feedbackMessage.textContent = 'Please fill in all required fields.';
+                return;
+            }
+
+            feedbackMessage.style.color = 'green';
+            feedbackMessage.textContent = 'Thank you for your feedback!';
+            fbForm.reset();
+        });
+// Assuming you have included jsqubits and animatedQubits.js already
+
+// Initialize quantum state |0>
+let qstate = jsqubits('|0>');
+
+// Create animatedQubits animation object
+let quantumAnimationObj = animatedQubits(qstate, { maxRadius: 70 });
+
+// Select or create your SVG container inside .quantum-animation
+const svgElement = document.querySelector('.quantum-animation svg') || (() => {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.style.position = 'absolute';
+  svg.style.top = '50%';
+  svg.style.left = '50%';
+  svg.style.transform = 'translate(-50%, -50%)';
+  svg.style.pointerEvents = 'none';
+  document.querySelector('.quantum-animation').appendChild(svg);
+  return svg;
+})();
+
+// Set SVG size based on animation natural dimensions
+const dims = quantumAnimationObj.getNaturalDimensions();
+svgElement.setAttribute('width', dims.width);
+svgElement.setAttribute('height', dims.height);
+
+// Display initial quantum state animation
+quantumAnimationObj.display(svgElement);
+
+// Example: Apply Hadamard gate on click of the particle
+document.querySelector('.quantum-particle').addEventListener('click', () => {
+  quantumAnimationObj.applyOperation(qs => qs.hadamard(0))
+    .then(newState => {
+      qstate = newState;
+      quantumAnimationObj = animatedQubits(qstate, { maxRadius: 70 });
+      quantumAnimationObj.display(svgElement);
+    })
+    .catch(console.error);
+});
+// URL of your CV PDF
+  // const cvUrl = "https://yourdomain.com/path-to-your-cv.pdf"; // Removed duplicate declaration
+
+  // Generate QR code dynamically using Google Chart API
+  const qrCodeImg = document.getElementById('qrCode');
+  qrCodeImg.src = `https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=${encodeURIComponent(cvUrl)}&choe=UTF-8`;
+
+  // Elements
+  const scanBtn = document.getElementById('scanBtn');
+  const videoMain = document.getElementById('video');
+  const scanResult = document.getElementById('scanResult');
+  const downloadLink = document.getElementById('downloadLink');
+
+  // Barcode scanning using jsQR library
+  // Load jsQR from CDN
+  const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js";
+  document.head.appendChild(script);
+
+  let scanning = false;
+  let videoStream;
+
+  scanBtn.addEventListener('click', () => {
+    if (scanning) {
+      stopScan();
+      return;
+    }
+    startScan();
+  });
+
+  function startScan() {
+    scanResult.textContent = "";
+    downloadLink.style.display = "none";
+    scanBtn.textContent = "Stop Scanning";
+    videoMain.style.display = "block";
+
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+      .then(stream => {
+        videoStream = stream;
+        videoMain.srcObject = stream;
+        videoMain.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+        videoMain.play();
+        scanning = true;
+        tick();
+      })
+      .catch(err => {
+        scanResult.style.color = "red";
+        scanResult.textContent = "Error accessing camera: " + err.message;
+      });
+  }
+
+  function stopScan() {
+    scanning = false;
+    scanBtn.textContent = "Scan QR Code to Download";
+    videoMain.style.display = "none";
+    scanResult.textContent = "";
+    if (videoStream) {
+      videoStream.getTracks().forEach(track => track.stop());
+    }
+  }
+
+  function tick() {
+    if (!scanning) return;
+
+    if (videoMain.readyState === videoMain.HAVE_ENOUGH_DATA) {
+      const canvas = document.createElement('canvas');
+      canvas.width = videoMain.videoWidth;
+      canvas.height = videoMain.videoHeight;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(videoMain, 0, 0, canvas.width, canvas.height);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+      const code = jsQR(imageData.data, canvas.width, canvas.height, {
+        inversionAttempts: "dontInvert",
+      });
+
+      if (code) {
+        scanResult.style.color = "green";
+        scanResult.textContent = "QR Code detected! Redirecting to download...";
+        stopScan();
+
+        // If scanned QR code matches your CV URL, show download button
+        if (code.data === cvUrl) {
+          downloadLink.style.display = "inline-block";
+        } else {
+          scanResult.style.color = "orange";
+          scanResult.textContent = "Scanned QR code does not match the CV link.";
+        }
+        return;
+      } else {
+        scanResult.textContent = "Scanning...";
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+// Initialize Lottie animation for AI download icon
+  const lottieAnimation = lottie.loadAnimation({
+    container: document.getElementById('lottieIcon'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets9.lottiefiles.com/packages/lf20_2LdLzX.json' // AI download style animation JSON URL
+  });
+
+  // Download button functionality
+  document.getElementById('aiDownloadBtn').addEventListener('click', () => {
+    // Create a temporary link to trigger download
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'My_CV.pdf'; // You can customize the downloaded file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+  
+
+  // Your CV URL - replace with your actual CV link
+  const cvUrl = "https://yourdomain.com/path-to-your-cv.pdf";
+
+  // Initialize QR Code Styling with AI-inspired customizations
+  const qrCode = new QRCodeStyling({
+    width: 300,
+    height: 300,
+    data: cvUrl,
+    image: "https://yourdomain.com/path-to-your-logo.png", // Optional logo for branding
+    dotsOptions: {
+      color: "#4a90e2",
+      type: "dots"
+    },
+    cornersSquareOptions: {
+      type: "extra-rounded",
+      color: "#50e3c2"
+    },
+    cornersDotOptions: {
+      color: "#4a90e2"
+    },
+    backgroundOptions: {
+      color: "#ffffff"
+    },
+    qrOptions: {
+      errorCorrectionLevel: "H" // High error correction for logo embedding
+    }
+  });
+
+  // Render QR code on canvas
+  const canvasContainer = document.getElementById("qrCanvas");
+  qrCode.append(canvasContainer);
+
+  // Download button element
+  const downloadBtn = document.getElementById("downloadBtn");
+  downloadBtn.addEventListener("click", () => {
+    // Trigger CV download
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = "My_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+
+  // Show download button when user clicks QR code (engagement trigger)
+  canvasContainer.addEventListener("click", () => {
+    downloadBtn.style.display = "inline-block";
+  });
+
+  // QR code scanning setup
+  const scanQrBtn = document.getElementById("scanQrBtn");
+  const video = document.getElementById("videoPreview");
+  const scanMessage = document.getElementById("scanMessage");
+  let scanningQr = false;
+  let videoStreamQr;
+
+  scanQrBtn.addEventListener("click", () => {
+    if (scanningQr) {
+      stopScan();
+    } else {
+      startScan();
+    }
+  });
+
+  function startScan() {
+    scanMessage.textContent = "";
+    scanQrBtn.textContent = "Stop Scanning";
+    video.style.display = "block";
+
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+      .then(stream => {
+        videoStreamQr = stream;
+        video.srcObject = stream;
+        video.setAttribute("playsinline", true);
+        video.play();
+        scanningQr = true;
+        scanFrame();
+      })
+      .catch(err => {
+        scanMessage.style.color = "red";
+        scanMessage.textContent = "Camera access denied or unavailable.";
+      });
+  }
+
+  function stopScan() {
+    scanningQr = false;
+    scanQrBtn.textContent = "Scan QR Code to Download";
+    video.style.display = "none";
+    scanMessage.textContent = "";
+    if (videoStreamQr) {
+      videoStreamQr.getTracks().forEach(track => track.stop());
+    }
+  }
+
+  function scanFrame() {
+    if (!scanningQr) return;
+
+    if (video.readyState === video.HAVE_ENOUGH_DATA) {
+      const canvas = document.createElement("canvas");
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+      const code = jsQR(imageData.data, canvas.width, canvas.height, {
+        inversionAttempts: "dontInvert",
+      });
+
+      if (code) {
+        if (code.data === cvUrl) {
+          scanMessage.style.color = "green";
+          scanMessage.textContent = "QR Code recognized! You can now download your CV.";
+          downloadBtn.style.display = "inline-block";
+          stopScan();
+          return;
+        } else {
+          scanMessage.style.color = "orange";
+          scanMessage.textContent = "Scanned QR code does not match the CV link.";
+        }
+      } else {
+        scanMessage.style.color = "#555";
+        scanMessage.textContent = "Scanning for QR code...";
+      }
+    }
+    requestAnimationFrame(scanFrame);
+  }
+    </script>
+</body>
+</html>
